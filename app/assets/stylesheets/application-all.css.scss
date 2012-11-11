@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require dataTables/jquery.dataTables.bootstrap
- *= require_tree .
+ *= require_tree ./all
 */
 
 .content {
@@ -28,6 +28,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 40px;
+  color: transparent
 }
 
 nav {
@@ -37,6 +38,11 @@ nav {
   -o-background-size: cover;
   background-size: cover; 
 }
+
+modal{
+  background-color: white;
+}
+
  /* Custom container */
 
 .container-narrow {
