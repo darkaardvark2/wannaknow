@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20121111012400) do
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
 
-  create_table "userprojects", :force => true do |t|
+  create_table "user_projects", :force => true do |t|
     t.integer  "user_id"
     t.integer  "project_id"
     t.boolean  "expert"
