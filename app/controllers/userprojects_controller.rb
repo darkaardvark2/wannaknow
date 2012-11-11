@@ -1,82 +1,82 @@
-class UserprojectsController < ApplicationController
-  # GET /userprojects
-  # GET /userprojects.json
+class UserProjectsController < ApplicationController
+  # GET /user_projects
+  # GET /user_projects.json
   def index
-    @userprojects = Userproject.all
+    @user_projects = UserProject.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @userprojects }
+      format.json { render json: @user_projects }
     end
   end
 
-  # GET /userprojects/1
-  # GET /userprojects/1.json
+  # GET /user_projects/1
+  # GET /user_projects/1.json
   def show
-    @userproject = Userproject.find(params[:id])
+    @user_project = UserProject.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @userproject }
+      format.json { render json: @user_project }
     end
   end
 
-  # GET /userprojects/new
-  # GET /userprojects/new.json
+  # GET /user_projects/new
+  # GET /user_projects/new.json
   def new
-    @userproject = Userproject.new
+    @user_project = UserProject.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @userproject }
+      format.json { render json: @user_project }
     end
   end
 
-  # GET /userprojects/1/edit
+  # GET /user_projects/1/edit
   def edit
-    @userproject = Userproject.find(params[:id])
+    @user_project = UserProject.find(params[:id])
   end
 
-  # POST /userprojects
-  # POST /userprojects.json
+  # POST /user_projects
+  # POST /user_projects.json
   def create
-    @userproject = Userproject.new(params[:userproject])
+    @user_project = UserProject.new(params[:user_project])
 
     respond_to do |format|
-      if @userproject.save
-        format.html { redirect_to @userproject, notice: 'Userproject was successfully created.' }
-        format.json { render json: @userproject, status: :created, location: @userproject }
+      if @user_project.save
+        format.html { redirect_to @user_project, notice: 'User project was successfully created.' }
+        format.json { render json: @user_project, status: :created, location: @user_project }
       else
         format.html { render action: "new" }
-        format.json { render json: @userproject.errors, status: :unprocessable_entity }
+        format.json { render json: @user_project.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PUT /userprojects/1
-  # PUT /userprojects/1.json
+  # PUT /user_projects/1
+  # PUT /user_projects/1.json
   def update
-    @userproject = Userproject.find(params[:id])
+    @user_project = UserProject.find(params[:id])
 
     respond_to do |format|
-      if @userproject.update_attributes(params[:userproject])
-        format.html { redirect_to @userproject, notice: 'Userproject was successfully updated.' }
+      if @user_project.update_attributes(params[:user_project])
+        format.html { redirect_to @user_project, notice: 'User project was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @userproject.errors, status: :unprocessable_entity }
+        format.json { render json: @user_project.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /userprojects/1
-  # DELETE /userprojects/1.json
+  # DELETE /user_projects/1
+  # DELETE /user_projects/1.json
   def destroy
-    @userproject = Userproject.find(params[:id])
-    @userproject.destroy
+    @user_project = UserProject.find(params[:id])
+    @user_project.destroy
 
     respond_to do |format|
-      format.html { redirect_to userprojects_url }
+      format.html { redirect_to user_projects_url }
       format.json { head :no_content }
     end
   end
