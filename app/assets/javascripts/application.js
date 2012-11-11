@@ -39,7 +39,10 @@ $('document').ready(function() {
   });
   
 })
-
+// Behold the mighty alert hiding script!!
+$(document).ready(function(){
+  $(".alert").delay(1500).fadeOut(2000); 
+});
 // load social sharing scripts if the page includes a Twitter "share" button
 function loadSocial() {
     
