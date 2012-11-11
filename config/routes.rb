@@ -1,4 +1,10 @@
 Wannaknow::Application.routes.draw do
+  resources :userprojects
+
+  resources :user_projects
+
+  resources :projects
+
   authenticated :user do
     root :to => 'home#index'
   end
